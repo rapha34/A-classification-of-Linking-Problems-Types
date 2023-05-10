@@ -11,7 +11,7 @@
     xmlns:foaf="http://xmlns.com/foaf/0.1/"
     xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
   <owl:Ontology rdf:about="https://w3id.org/LPT/ontology/LPTsOntology">
-    <dc:creator>Raphaël CONDE SALAZAR</dc:creator>
+    <dc:creator>XXXXXXXXXXXXXXXXXXXX</dc:creator>
     <dc:description>Ontology of LPT classification</dc:description>
     <rdfs:label>Ontology of LPTs</rdfs:label>
   </owl:Ontology>
