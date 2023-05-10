@@ -1,0 +1,749 @@
+<rdf:RDF
+    xmlns:dct="http://purl.org/dc/terms/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:prov="http://www.w3.org/ns/prov#"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:dcat="http://www.w3.org/ns/dcat#/"
+    xmlns:lpt="https://w3id.org/LPT/ontology/"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <owl:Ontology rdf:about="https://w3id.org/LPT/ontology/LPTsOntology">
+    <dc:creator>Raphaël CONDE SALAZAR</dc:creator>
+    <dc:description>Ontology of LPT classification</dc:description>
+    <rdfs:label>Ontology of LPTs</rdfs:label>
+  </owl:Ontology>
+  <owl:Class rdf:about="http://www.w3.org/ns/prov#Entity"/>
+  <owl:Class rdf:about="https://w3id.org/LPT/ontology/HeterogeneitySource">
+    <owl:disjointWith>
+      <owl:Class rdf:about="https://w3id.org/LPT/ontology/PairOfDatasets"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://www.w3.org/ns/dcat#/Dataset"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.w3.org/2004/02/skos/core#Concept"/>
+  <owl:Class rdf:about="https://w3id.org/LPT/ontology/PairOfDatasets">
+    <owl:disjointWith rdf:resource="http://www.w3.org/ns/dcat#/Dataset"/>
+    <rdfs:comment xml:lang="en">PairOfDatasets is the set of all pairs of RDF datasets intended to be semantically linked.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/LPT/ontology/LPT">
+    <owl:disjointWith>
+      <owl:Class rdf:about="https://w3id.org/LPT/ontology/Heterogeneity"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="https://w3id.org/LPT/ontology/HeterogeneitySource"/>
+    <owl:disjointWith rdf:resource="https://w3id.org/LPT/ontology/PairOfDatasets"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/ns/dcat#/Dataset"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://www.w3.org/2004/02/skos/core#notation"/>
+        </owl:onProperty>
+        <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+    <rdfs:comment xml:lang="en">LPT is the set of all types of problems that can be encountered when binding semantic data.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/LPT/ontology/Heterogeneity">
+    <owl:disjointWith rdf:resource="https://w3id.org/LPT/ontology/HeterogeneitySource"/>
+    <owl:disjointWith rdf:resource="https://w3id.org/LPT/ontology/PairOfDatasets"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/ns/dcat#/Dataset"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+    <rdfs:comment xml:lang="en">Heterogeneity is the set of all heterogeneities described in the data linking corpus.</rdfs:comment>
+    <rdfs:comment xml:lang="en">HeterogeneitySource is the set of all bibliographic references dealing with a heterogeneity described in the data linking corpus.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.w3.org/ns/dcat#/Distribution"/>
+  <owl:ObjectProperty rdf:about="https://w3id.org/LPT/ontology/occursIn"/>
+  <owl:ObjectProperty rdf:about="https://w3id.org/LPT/ontology/hasSource"/>
+  <owl:ObjectProperty rdf:about="https://w3id.org/LPT/ontology/hasTarget"/>
+  <owl:ObjectProperty rdf:about="http://www.w3.org/ns/prov#wasInfluencedBy"/>
+  <owl:ObjectProperty rdf:about="http://www.w3.org/ns/dcat#/distribution"/>
+  <owl:ObjectProperty rdf:about="http://www.w3.org/ns/prov#wasDerivedFrom"/>
+  <lpt:LPT rdf:about="https://w3id.org/LPT/ontology/LPT5_7">
+    <skos:notation>5_7</skos:notation>
+    <rdfs:label>LPT5_7</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#notation"/>
+        <owl:hasValue>5_7</owl:hasValue>
+      </owl:Restriction>
+    </owl:equivalentClass>
+    <rdfs:subClassOf>
+      <lpt:LPT rdf:about="https://w3id.org/LPT/ontology/LPT5">
+        <skos:notation>5</skos:notation>
+        <rdfs:label>LPT5</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <owl:equivalentClass>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#notation"/>
+            <owl:hasValue>5</owl:hasValue>
+          </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/LPT/ontology/LPT"/>
+      </lpt:LPT>
+    </rdfs:subClassOf>
+  </lpt:LPT>
+  <lpt:LPT rdf:about="https://w3id.org/LPT/ontology/LPT2_2_2">
+    <skos:notation>2_2_2</skos:notation>
+    <rdfs:label>LPT2_2_2</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#notation"/>
+        <owl:hasValue>2_2_2</owl:hasValue>
+      </owl:Restriction>
+    </owl:equivalentClass>
+    <rdfs:subClassOf>
+      <lpt:LPT rdf:about="https://w3id.org/LPT/ontology/LPT2_2">
+        <skos:notation>2_2</skos:notation>
+        <rdfs:label>LPT2_2</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <owl:equivalentClass>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#notation"/>
+            <owl:hasValue>2_2</owl:hasValue>
+          </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf>
+          <lpt:LPT rdf:about="https://w3id.org/LPT/ontology/LPT2">
+            <skos:notation>2</skos:notation>
+            <rdfs:label>LPT2</rdfs:label>
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+            <owl:equivalentClass>
+              <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#notation"/>
+                <owl:hasValue>2</owl:hasValue>
+              </owl:Restriction>
+            </owl:equivalentClass>
+            <rdfs:subClassOf rdf:resource="https://w3id.org/LPT/ontology/LPT"/>
+          </lpt:LPT>
+        </rdfs:subClassOf>
+      </lpt:LPT>
+    </rdfs:subClassOf>
+  </lpt:LPT>
+  <lpt:LPT rdf:about="https://w3id.org/LPT/ontology/LPT2_1_5">
+    <skos:notation>2_1_5</skos:notation>
+    <rdfs:label>LPT2_1_5</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#notation"/>
+        <owl:hasValue>2_1_5</owl:hasValue>
+      </owl:Restriction>
+    </owl:equivalentClass>
+    <rdfs:subClassOf>
+      <lpt:LPT rdf:about="https://w3id.org/LPT/ontology/LPT2_1">
+        <skos:notation>2_1</skos:notation>
+        <rdfs:label>LPT2_1</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <owl:equivalentClass>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#notation"/>
+            <owl:hasValue>2_1</owl:hasValue>
+          </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/LPT/ontology/LPT2"/>
+      </lpt:LPT>
+    </rdfs:subClassOf>
+  </lpt:LPT>
+  <lpt:LPT rdf:about="https://w3id.org/LPT/ontology/LPT1_1_2_3">
+    <skos:notation>1_1_2_3</skos:notation>
+    <rdfs:label>LPT1_1_2_3</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#notation"/>
+        <owl:hasValue>1_1_2_3</owl:hasValue>
+      </owl:Restriction>
+    </owl:equivalentClass>
+    <rdfs:subClassOf>
+      <lpt:LPT rdf:about="https://w3id.org/LPT/ontology/LPT1_1_2">
+        <skos:notation>1_1_2</skos:notation>
+        <rdfs:label>LPT1_1_2</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <owl:equivalentClass>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#notation"/>
+            <owl:hasValue>1_1_2</owl:hasValue>
+          </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf>
+          <lpt:LPT rdf:about="https://w3id.org/LPT/ontology/LPT1_1">
+            <skos:notation>1_1</skos:notation>
+            <rdfs:label>LPT1_1</rdfs:label>
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+            <owl:equivalentClass>
+              <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#notation"/>
+                <owl:hasValue>1_1</owl:hasValue>
+              </owl:Restriction>
+            </owl:equivalentClass>
+            <rdfs:subClassOf>
+              <lpt:LPT rdf:about="https://w3id.org/LPT/ontology/LPT1">
+                <skos:notation>1</skos:notation>
+                <rdfs:label>LPT1</rdfs:label>
+                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+                <owl:equivalentClass>
+                  <owl:Restriction>
+                    <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#notation"/>
+                    <owl:hasValue>1</owl:hasValue>
+                  </owl:Restriction>
+                </owl:equivalentClass>
+                <rdfs:subClassOf rdf:resource="https://w3id.org/LPT/ontology/LPT"/>
+              </lpt:LPT>
+            </rdfs:subClassOf>
+          </lpt:LPT>
+        </rdfs:subClassOf>
+      </lpt:LPT>
+    </rdfs:subClassOf>
+  </lpt:LPT>
+  <lpt:LPT rdf:about="https://w3id.org/LPT/ontology/LPT5_4_6">
+    <skos:notation>5_4_6</skos:notation>
+    <rdfs:label>LPT5_4_6</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#notation"/>
+        <owl:hasValue>5_4_6</owl:hasValue>
+      </owl:Restriction>
+    </owl:equivalentClass>
+    <rdfs:subClassOf>
+      <lpt:LPT rdf:about="https://w3id.org/LPT/ontology/LPT5_4">
+        <skos:notation>5_4</skos:notation>
+        <rdfs:label>LPT5_4</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <owl:equivalentClass>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#notation"/>
+            <owl:hasValue>5_4</owl:hasValue>
+          </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/LPT/ontology/LPT5"/>
+      </lpt:LPT>
+    </rdfs:subClassOf>
+  </lpt:LPT>
+  <lpt:LPT rdf:about="https://w3id.org/LPT/ontology/LPT4_2">
+    <skos:notation>4_2</skos:notation>
+    <rdfs:label>LPT4_2</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#notation"/>
+        <owl:hasValue>4_2</owl:hasValue>
+      </owl:Restriction>
+    </owl:equivalentClass>
+    <rdfs:subClassOf>
+      <lpt:LPT rdf:about="https://w3id.org/LPT/ontology/LPT4">
+        <skos:notation>4</skos:notation>
+        <rdfs:label>LPT4</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <owl:equivalentClass>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#notation"/>
+            <owl:hasValue>4</owl:hasValue>
+          </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/LPT/ontology/LPT"/>
+      </lpt:LPT>
+    </rdfs:subClassOf>
+  </lpt:LPT>
+  <lpt:LPT rdf:about="https://w3id.org/LPT/ontology/LPT3_1_5">
+    <skos:notation>3_1_5</skos:notation>
+    <rdfs:label>LPT3_1_5</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#notation"/>
+        <owl:hasValue>3_1_5</owl:hasValue>
+      </owl:Restriction>
+    </owl:equivalentClass>
+    <rdfs:subClassOf>
+      <lpt:LPT rdf:about="https://w3id.org/LPT/ontology/LPT3_1">
+        <skos:notation>3_1</skos:notation>
+        <rdfs:label>LPT3_1</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <owl:equivalentClass>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#notation"/>
+            <owl:hasValue>3_1</owl:hasValue>
+          </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf>
+          <lpt:LPT rdf:about="https://w3id.org/LPT/ontology/LPT3">
+            <skos:notation>3</skos:notation>
+            <rdfs:label>LPT3</rdfs:label>
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+            <owl:equivalentClass>
+              <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#notation"/>
+                <owl:hasValue>3</owl:hasValue>
+              </owl:Restriction>
+            </owl:equivalentClass>
+            <rdfs:subClassOf rdf:resource="https://w3id.org/LPT/ontology/LPT"/>
+          </lpt:LPT>
+        </rdfs:subClassOf>
+      </lpt:LPT>
+    </rdfs:subClassOf>
+  </lpt:LPT>
+  <lpt:LPT rdf:about="https://w3id.org/LPT/ontology/LPT1_2_1">
+    <skos:notation>1_2_1</skos:notation>
+    <rdfs:label>LPT1_2_1</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#notation"/>
+        <owl:hasValue>1_2_1</owl:hasValue>
+      </owl:Restriction>
+    </owl:equivalentClass>
+    <rdfs:subClassOf>
+      <lpt:LPT rdf:about="https://w3id.org/LPT/ontology/LPT1_2">
+        <skos:notation>1_2</skos:notation>
+        <rdfs:label>LPT1_2</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <owl:equivalentClass>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#notation"/>
+            <owl:hasValue>1_2</owl:hasValue>
+          </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/LPT/ontology/LPT1"/>
+      </lpt:LPT>
+    </rdfs:subClassOf>
+  </lpt:LPT>
+  <lpt:LPT rdf:about="https://w3id.org/LPT/ontology/LPT5_8">
+    <skos:notation>5_8</skos:notation>
+    <rdfs:label>LPT5_8</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#notation"/>
+        <owl:hasValue>5_8</owl:hasValue>
+      </owl:Restriction>
+    </owl:equivalentClass>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/LPT/ontology/LPT5"/>
+  </lpt:LPT>
+  <lpt:LPT rdf:about="https://w3id.org/LPT/ontology/LPT2_2_3">
+    <skos:notation>2_2_3</skos:notation>
+    <rdfs:label>LPT2_2_3</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#notation"/>
+        <owl:hasValue>2_2_3</owl:hasValue>
+      </owl:Restriction>
+    </owl:equivalentClass>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/LPT/ontology/LPT2_2"/>
+  </lpt:LPT>
+  <lpt:LPT rdf:about="https://w3id.org/LPT/ontology/LPT1_1_2_4">
+    <skos:notation>1_1_2_4</skos:notation>
+    <rdfs:label>LPT1_1_2_4</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#notation"/>
+        <owl:hasValue>1_1_2_4</owl:hasValue>
+      </owl:Restriction>
+    </owl:equivalentClass>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/LPT/ontology/LPT1_1_2"/>
+  </lpt:LPT>
+  <lpt:LPT rdf:about="https://w3id.org/LPT/ontology/LPT5_4_5">
+    <skos:notation>5_4_5</skos:notation>
+    <rdfs:label>LPT5_4_5</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#notation"/>
+        <owl:hasValue>5_4_5</owl:hasValue>
+      </owl:Restriction>
+    </owl:equivalentClass>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/LPT/ontology/LPT5_4"/>
+  </lpt:LPT>
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+  <lpt:LPT rdf:about="https://w3id.org/LPT/ontology/LPT3_1_4">
+    <skos:notation>3_1_4</skos:notation>
+    <rdfs:label>LPT3_1_4</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#notation"/>
+        <owl:hasValue>3_1_4</owl:hasValue>
+      </owl:Restriction>
+    </owl:equivalentClass>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/LPT/ontology/LPT3_1"/>
+  </lpt:LPT>
+  <lpt:LPT rdf:about="https://w3id.org/LPT/ontology/LPT1_2_2">
+    <skos:notation>1_2_2</skos:notation>
+    <rdfs:label>LPT1_2_2</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#notation"/>
+        <owl:hasValue>1_2_2</owl:hasValue>
+      </owl:Restriction>
+    </owl:equivalentClass>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/LPT/ontology/LPT1_2"/>
+  </lpt:LPT>
+  <lpt:LPT rdf:about="https://w3id.org/LPT/ontology/LPT2_1_3">
+    <skos:notation>2_1_3</skos:notation>
+    <rdfs:label>LPT2_1_3</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#notation"/>
+        <owl:hasValue>2_1_3</owl:hasValue>
+      </owl:Restriction>
+    </owl:equivalentClass>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/LPT/ontology/LPT2_1"/>
+  </lpt:LPT>
+  <lpt:LPT rdf:about="https://w3id.org/LPT/ontology/LPT1_1_2_5">
+    <skos:notation>1_1_2_5</skos:notation>
+    <rdfs:label>LPT1_1_2_5</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#notation"/>
+        <owl:hasValue>1_1_2_5</owl:hasValue>
+      </owl:Restriction>
+    </owl:equivalentClass>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/LPT/ontology/LPT1_1_2"/>
+  </lpt:LPT>
+  <lpt:LPT rdf:about="https://w3id.org/LPT/ontology/LPT5_4_4">
+    <skos:notation>5_4_4</skos:notation>
+    <rdfs:label>LPT5_4_4</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#notation"/>
+        <owl:hasValue>5_4_4</owl:hasValue>
+      </owl:Restriction>
+    </owl:equivalentClass>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/LPT/ontology/LPT5_4"/>
+  </lpt:LPT>
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/bibliographicCitation"/>
+  <lpt:LPT rdf:about="https://w3id.org/LPT/ontology/LPT5_1">
+    <skos:notation>5_1</skos:notation>
+    <rdfs:label>LPT5_1</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#notation"/>
+        <owl:hasValue>5_1</owl:hasValue>
+      </owl:Restriction>
+    </owl:equivalentClass>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/LPT/ontology/LPT5"/>
+  </lpt:LPT>
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/isPartOf"/>
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/publisher"/>
+  <lpt:LPT rdf:about="https://w3id.org/LPT/ontology/LPT3_1_3">
+    <skos:notation>3_1_3</skos:notation>
+    <rdfs:label>LPT3_1_3</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#notation"/>
+        <owl:hasValue>3_1_3</owl:hasValue>
+      </owl:Restriction>
+    </owl:equivalentClass>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/LPT/ontology/LPT3_1"/>
+  </lpt:LPT>
+  <lpt:LPT rdf:about="https://w3id.org/LPT/ontology/LPT2_2_1">
+    <skos:notation>2_2_1</skos:notation>
+    <rdfs:label>LPT2_2_1</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#notation"/>
+        <owl:hasValue>2_2_1</owl:hasValue>
+      </owl:Restriction>
+    </owl:equivalentClass>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/LPT/ontology/LPT2_2"/>
+  </lpt:LPT>
+  <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#altLabel"/>
+  <lpt:LPT rdf:about="https://w3id.org/LPT/ontology/LPT2_1_4">
+    <skos:notation>2_1_4</skos:notation>
+    <rdfs:label>LPT2_1_4</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#notation"/>
+        <owl:hasValue>2_1_4</owl:hasValue>
+      </owl:Restriction>
+    </owl:equivalentClass>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/LPT/ontology/LPT2_1"/>
+  </lpt:LPT>
+  <lpt:LPT rdf:about="https://w3id.org/LPT/ontology/LPT1_1_1_1">
+    <skos:notation>1_1_1_1</skos:notation>
+    <rdfs:label>LPT1_1_1_1</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#notation"/>
+        <owl:hasValue>1_1_1_1</owl:hasValue>
+      </owl:Restriction>
+    </owl:equivalentClass>
+    <rdfs:subClassOf>
+      <lpt:LPT rdf:about="https://w3id.org/LPT/ontology/LPT1_1_1">
+        <skos:notation>1_1_1</skos:notation>
+        <rdfs:label>LPT1_1_1</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <owl:equivalentClass>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#notation"/>
+            <owl:hasValue>1_1_1</owl:hasValue>
+          </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/LPT/ontology/LPT1_1"/>
+      </lpt:LPT>
+    </rdfs:subClassOf>
+  </lpt:LPT>
+  <lpt:LPT rdf:about="https://w3id.org/LPT/ontology/LPT5_4_3">
+    <skos:notation>5_4_3</skos:notation>
+    <rdfs:label>LPT5_4_3</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#notation"/>
+        <owl:hasValue>5_4_3</owl:hasValue>
+      </owl:Restriction>
+    </owl:equivalentClass>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/LPT/ontology/LPT5_4"/>
+  </lpt:LPT>
+  <lpt:LPT rdf:about="https://w3id.org/LPT/ontology/LPT5_2">
+    <skos:notation>5_2</skos:notation>
+    <rdfs:label>LPT5_2</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#notation"/>
+        <owl:hasValue>5_2</owl:hasValue>
+      </owl:Restriction>
+    </owl:equivalentClass>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/LPT/ontology/LPT5"/>
+  </lpt:LPT>
+  <lpt:LPT rdf:about="https://w3id.org/LPT/ontology/LPT2_3">
+    <skos:notation>2_3</skos:notation>
+    <rdfs:label>LPT2_3</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#notation"/>
+        <owl:hasValue>2_3</owl:hasValue>
+      </owl:Restriction>
+    </owl:equivalentClass>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/LPT/ontology/LPT2"/>
+  </lpt:LPT>
+  <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#prefLabel"/>
+  <lpt:LPT rdf:about="https://w3id.org/LPT/ontology/LPT3_1_2">
+    <skos:notation>3_1_2</skos:notation>
+    <rdfs:label>LPT3_1_2</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#notation"/>
+        <owl:hasValue>3_1_2</owl:hasValue>
+      </owl:Restriction>
+    </owl:equivalentClass>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/LPT/ontology/LPT3_1"/>
+  </lpt:LPT>
+  <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/dcat#/mediaType"/>
+  <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/dcat#/accessURL"/>
+  <lpt:LPT rdf:about="https://w3id.org/LPT/ontology/LPT2_1_1">
+    <skos:notation>2_1_1</skos:notation>
+    <rdfs:label>LPT2_1_1</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#notation"/>
+        <owl:hasValue>2_1_1</owl:hasValue>
+      </owl:Restriction>
+    </owl:equivalentClass>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/LPT/ontology/LPT2_1"/>
+  </lpt:LPT>
+  <lpt:LPT rdf:about="https://w3id.org/LPT/ontology/LPT1_1_1_2">
+    <skos:notation>1_1_1_2</skos:notation>
+    <rdfs:label>LPT1_1_1_2</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#notation"/>
+        <owl:hasValue>1_1_1_2</owl:hasValue>
+      </owl:Restriction>
+    </owl:equivalentClass>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/LPT/ontology/LPT1_1_1"/>
+  </lpt:LPT>
+  <lpt:LPT rdf:about="https://w3id.org/LPT/ontology/LPT5_3">
+    <skos:notation>5_3</skos:notation>
+    <rdfs:label>LPT5_3</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#notation"/>
+        <owl:hasValue>5_3</owl:hasValue>
+      </owl:Restriction>
+    </owl:equivalentClass>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/LPT/ontology/LPT5"/>
+  </lpt:LPT>
+  <lpt:LPT rdf:about="https://w3id.org/LPT/ontology/LPT5_4_2">
+    <skos:notation>5_4_2</skos:notation>
+    <rdfs:label>LPT5_4_2</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#notation"/>
+        <owl:hasValue>5_4_2</owl:hasValue>
+      </owl:Restriction>
+    </owl:equivalentClass>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/LPT/ontology/LPT5_4"/>
+  </lpt:LPT>
+  <lpt:LPT rdf:about="https://w3id.org/LPT/ontology/LPT3_1_1">
+    <skos:notation>3_1_1</skos:notation>
+    <rdfs:label>LPT3_1_1</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#notation"/>
+        <owl:hasValue>3_1_1</owl:hasValue>
+      </owl:Restriction>
+    </owl:equivalentClass>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/LPT/ontology/LPT3_1"/>
+  </lpt:LPT>
+  <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#definition"/>
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/suject"/>
+  <lpt:LPT rdf:about="https://w3id.org/LPT/ontology/LPT2_1_2">
+    <skos:notation>2_1_2</skos:notation>
+    <rdfs:label>LPT2_1_2</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#notation"/>
+        <owl:hasValue>2_1_2</owl:hasValue>
+      </owl:Restriction>
+    </owl:equivalentClass>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/LPT/ontology/LPT2_1"/>
+  </lpt:LPT>
+  <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/dcat#/downloadURL"/>
+  <lpt:LPT rdf:about="https://w3id.org/LPT/ontology/LPT5_4_1">
+    <skos:notation>5_4_1</skos:notation>
+    <rdfs:label>LPT5_4_1</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#notation"/>
+        <owl:hasValue>5_4_1</owl:hasValue>
+      </owl:Restriction>
+    </owl:equivalentClass>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/LPT/ontology/LPT5_4"/>
+  </lpt:LPT>
+  <lpt:LPT rdf:about="https://w3id.org/LPT/ontology/LPT3_2">
+    <skos:notation>3_2</skos:notation>
+    <rdfs:label>LPT3_2</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#notation"/>
+        <owl:hasValue>3_2</owl:hasValue>
+      </owl:Restriction>
+    </owl:equivalentClass>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/LPT/ontology/LPT3"/>
+  </lpt:LPT>
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/issued"/>
+  <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/dcat#/byteSize"/>
+  <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#label"/>
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+  <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
+  <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/dcat#/keyword"/>
+  <lpt:LPT rdf:about="https://w3id.org/LPT/ontology/LPT5_5">
+    <skos:notation>5_5</skos:notation>
+    <rdfs:label>LPT5_5</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#notation"/>
+        <owl:hasValue>5_5</owl:hasValue>
+      </owl:Restriction>
+    </owl:equivalentClass>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/LPT/ontology/LPT5"/>
+  </lpt:LPT>
+  <lpt:LPT rdf:about="https://w3id.org/LPT/ontology/LPT2_2_4">
+    <skos:notation>2_2_4</skos:notation>
+    <rdfs:label>LPT2_2_4</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#notation"/>
+        <owl:hasValue>2_2_4</owl:hasValue>
+      </owl:Restriction>
+    </owl:equivalentClass>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/LPT/ontology/LPT2_2"/>
+  </lpt:LPT>
+  <lpt:LPT rdf:about="https://w3id.org/LPT/ontology/LPT1_1_2_1">
+    <skos:notation>1_1_2_1</skos:notation>
+    <rdfs:label>LPT1_1_2_1</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#notation"/>
+        <owl:hasValue>1_1_2_1</owl:hasValue>
+      </owl:Restriction>
+    </owl:equivalentClass>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/LPT/ontology/LPT1_1_2"/>
+  </lpt:LPT>
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/language"/>
+  <lpt:LPT rdf:about="https://w3id.org/LPT/ontology/LPT5_6">
+    <skos:notation>5_6</skos:notation>
+    <rdfs:label>LPT5_6</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#notation"/>
+        <owl:hasValue>5_6</owl:hasValue>
+      </owl:Restriction>
+    </owl:equivalentClass>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/LPT/ontology/LPT5"/>
+  </lpt:LPT>
+  <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/dcat#/contactPoint"/>
+  <lpt:LPT rdf:about="https://w3id.org/LPT/ontology/LPT1_1_2_2">
+    <skos:notation>1_1_2_2</skos:notation>
+    <rdfs:label>LPT1_1_2_2</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#notation"/>
+        <owl:hasValue>1_1_2_2</owl:hasValue>
+      </owl:Restriction>
+    </owl:equivalentClass>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/LPT/ontology/LPT1_1_2"/>
+  </lpt:LPT>
+  <lpt:LPT rdf:about="https://w3id.org/LPT/ontology/LPT4_1">
+    <skos:notation>4_1</skos:notation>
+    <rdfs:label>LPT4_1</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#notation"/>
+        <owl:hasValue>4_1</owl:hasValue>
+      </owl:Restriction>
+    </owl:equivalentClass>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/LPT/ontology/LPT4"/>
+  </lpt:LPT>
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>
+  <lpt:LPT rdf:about="https://w3id.org/LPT/ontology/LPT1_1_3">
+    <skos:notation>1_1_3</skos:notation>
+    <rdfs:label>LPT1_1_3</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#notation"/>
+        <owl:hasValue>1_1_3</owl:hasValue>
+      </owl:Restriction>
+    </owl:equivalentClass>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/LPT/ontology/LPT1_1"/>
+  </lpt:LPT>
+</rdf:RDF>
